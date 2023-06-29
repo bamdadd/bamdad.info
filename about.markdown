@@ -3,9 +3,9 @@ layout: page
 title: About
 permalink: /about/
 ---
-Bamdad Consulting
+# Bamdad Consulting
 
-#Contact:
+### Contact:
 
 email: [bamdad-{nospam}@bamdad.info](mailto:bamdad-{nospam}@bamdad.info)
 
