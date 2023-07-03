@@ -139,5 +139,5 @@ There are already existing alternatives to OpenCV and Flask that can be used to 
 
 Most famous alternative is probabbly [DeepStream SDK](https://developer.nvidia.com/deepstream-sdk) from Nvidia. This is a great solution if you are using Nvidia hardware and you are willing to invest in learning the system. [Paul Bridger](https://paulbridger.com/posts/video-analytics-pytorch-pipeline/) has a great series of blog posts explaining how to use Python, DeepStream and Pytorch to construct a video analysis pipeline and utilze the GPU to the fulles.
  
- ### Whats coming up next?
+### Whats coming up next?
  Ok, I think we have enough background to start building a better solution.  In the next post we'll start building a better solution and we'll go through the challenges that we face and how to overcome them.  Stay tuned!
