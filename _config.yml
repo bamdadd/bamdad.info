@@ -21,9 +21,9 @@
 title: Bamdad Consulting Ltd.
 email: bamdad-{nospam}@bamdad.info
 description: >- # this means to ignore newlines until "baseurl:"
-  Bamdad Consulting Ltd. is a boutique consulting firm specializing in the design and implementation of AI solutions for businesses.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.bamdad.info" # the base hostname & protocol for your site, e.g. http://example.com
+  Bamdad Consulting Ltd. is a boutique consulting firm by Bamdad Dashtban specializing in the design and implementation of AI solutions for businesses.
+baseurl: ""
+url: "https://www.bamdad.info" 
 twitter_username: bamdad
 github_username:  bamdadd
 
@@ -31,6 +31,8 @@ github_username:  bamdadd
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
