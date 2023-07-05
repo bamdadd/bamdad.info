@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  Real Time Video Analysis in Python Part 1
+title:  Real Time Video Analysis in Python Part 1 (Problem intro)
 author: Bamdad Dashtban
 category: Python, Computer Vision
 tags: [python, computer vision, video analysis, opencv, flask, deepstream, pytorch, yolov5]
