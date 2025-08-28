@@ -4,9 +4,9 @@
 
 layout: home
 ---
-### Tech Consulting and Contracting
+### Finance & Healthcare Technology Consulting
 
-Explore our comprehensive tech consulting and contracting services in DevOps, MLOps, AI, software delivery, computer vision, infrastructure, and data engineering. Leverage our expertise to drive innovation and achieve operational excellence. [more details](/about/)
+Specializing in transformative technology solutions for finance and healthcare sectors. We deliver cutting-edge AI implementations, robust software engineering, and enterprise-grade DevOps practices to help organizations achieve digital excellence and regulatory compliance. [more details](/about/)
 
 ---
 
