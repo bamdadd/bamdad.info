@@ -96,7 +96,24 @@ Partner with us to transform your organization's technology capabilities while e
 
 ### Contact:
 
-email: [bamdad-{nospam}@bamdad.info](mailto:bamdad-{nospam}@bamdad.info)
+email: <a href="#" onclick="revealEmailAbout(this); return false;" class="email-obfuscated">Click to reveal email</a>
 
 address: Ground Floor, Unit B Lostock Office Park, Lynstock Way, Lostock, Bolton, England, BL6 4SG
 
+<script>
+function revealEmailAbout(link) {
+  // ROT13 encoded email to prevent spam bot harvesting
+  const encoded = 'onzqnq@onzqnq.vasb';
+  const email = encoded.replace(/[a-zA-Z]/g, function(c) {
+    return String.fromCharCode((c <= 'Z' ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+  });
+  
+  // Update the link text and make it a proper mailto
+  link.href = 'mailto:' + email;
+  link.textContent = email;
+  link.onclick = null; // Remove the onclick handler
+  
+  // Optionally trigger the email client
+  window.location.href = 'mailto:' + email;
+}
+</script>

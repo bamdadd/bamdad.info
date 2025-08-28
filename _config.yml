@@ -18,14 +18,41 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Bamdad Consulting Ltd.
-email: bamdad-{nospam}@bamdad.info
+title: Bamdad Consulting
+email: bamdad@bamdad.info
 description: >- # this means to ignore newlines until "baseurl:"
-  Bamdad Consulting Ltd. is a boutique consulting firm by Bamdad Dashtban specializing in the design and implementation of AI solutions for businesses.
+  Specialized technology consulting for finance, healthcare, and legal sectors. 
+  We deliver cutting-edge AI implementations, enterprise software engineering, 
+  DevOps excellence, and mobile solutions with regulatory compliance at their core.
 baseurl: ""
 url: "https://www.bamdad.info" 
 twitter_username: bamdad
 github_username:  bamdadd
+
+# Site branding
+author:
+  name: Bamdad Dashtban
+  title: Principal Consultant
+  bio: Technology consultant specializing in AI, software engineering, and DevOps for regulated industries
+
+# Navigation
+header_pages:
+  - about.markdown
+  - index.markdown
+
+# SEO and social
+logo: /assets/images/logo.png
+social:
+  name: Bamdad Consulting
+  links:
+    - https://twitter.com/bamdad
+    - https://github.com/bamdadd
+    - https://linkedin.com/in/bamdad
+
+# Blog settings
+show_excerpts: true
+paginate: 5
+paginate_path: "/blog/page:num/"
 
 # Build settings
 theme: minima

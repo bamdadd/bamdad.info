@@ -1,0 +1,156 @@
+---
+layout: default
+---
+
+<div class="hero-section">
+  <div class="hero-content">
+    <h1>{{ site.title }}</h1>
+    <p class="hero-subtitle">{{ site.description }}</p>
+    <a href="/about/" class="cta-button">Learn More About Our Services</a>
+  </div>
+</div>
+
+<div class="content-section">
+  <div class="wrapper">
+    <div class="section-title">
+      <h2>Our Expertise</h2>
+      <p class="section-subtitle">Specialized consulting for regulated industries requiring the highest standards of security and compliance</p>
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon ai-icon"></div>
+        <h3>Artificial Intelligence</h3>
+        <p>Custom AI solutions for fraud detection, risk assessment, and predictive analytics in finance and healthcare.</p>
+        <ul>
+          <li>Machine Learning Model Development</li>
+          <li>Natural Language Processing</li>
+          <li>Computer Vision Applications</li>
+          <li>Regulatory Compliant AI</li>
+        </ul>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon software-icon"></div>
+        <h3>Software Engineering</h3>
+        <p>Enterprise-grade software solutions with security, scalability, and compliance built-in from day one.</p>
+        <ul>
+          <li>Microservices Architecture</li>
+          <li>API Development & Integration</li>
+          <li>Mobile Application Development</li>
+          <li>Legacy System Modernization</li>
+        </ul>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon devops-icon"></div>
+        <h3>DevOps & Infrastructure</h3>
+        <p>Modern DevOps practices designed specifically for compliance-heavy, regulated environments.</p>
+        <ul>
+          <li>CI/CD Pipeline Implementation</li>
+          <li>Cloud Infrastructure Setup</li>
+          <li>Security & Compliance Automation</li>
+          <li>Performance Monitoring</li>
+        </ul>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon data-icon"></div>
+        <h3>Data Strategy</h3>
+        <p>Transform your data into strategic business assets with modern data architecture and governance.</p>
+        <ul>
+          <li>Data Mesh Implementation</li>
+          <li>Analytics Platform Development</li>
+          <li>Data Governance Frameworks</li>
+          <li>Business Intelligence Solutions</li>
+        </ul>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon mobile-icon"></div>
+        <h3>Mobile Solutions</h3>
+        <p>Secure, high-performance mobile applications for banking, healthcare, and enterprise use cases.</p>
+        <ul>
+          <li>React Native Development</li>
+          <li>Mobile Banking Security</li>
+          <li>Healthcare Patient Apps</li>
+          <li>Enterprise Mobility Solutions</li>
+        </ul>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon security-icon"></div>
+        <h3>Compliance & Security</h3>
+        <p>Navigate complex regulatory requirements with confidence through expert guidance and implementation.</p>
+        <ul>
+          <li>ISO 27001 Certification</li>
+          <li>HIPAA & SOX Compliance</li>
+          <li>GDPR Implementation</li>
+          <li>Security Architecture Review</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content-section bg-light">
+  <div class="wrapper">
+    <div class="section-title">
+      <h2>Industry Focus</h2>
+      <p class="section-subtitle">Deep expertise in regulated industries with complex technology and compliance requirements</p>
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon finance-icon"></div>
+        <h3>Financial Services</h3>
+        <p>Digital banking, trading platforms, payment systems, and regulatory reporting solutions.</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon healthcare-icon"></div>
+        <h3>Healthcare</h3>
+        <p>Telemedicine platforms, EHR integration, clinical decision support, and patient engagement systems.</p>
+      </div>
+      
+      <div class="service-card">
+        <div class="service-icon legal-icon"></div>
+        <h3>Legal Sector</h3>
+        <p>Document management, AI compliance, case management systems, and information security frameworks.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- if site.posts.size > 0 -%}
+<div class="content-section">
+  <div class="wrapper">
+    <div class="section-title">
+      <h2>Latest Insights</h2>
+      <p class="section-subtitle">Technical insights and case studies from our consulting projects</p>
+    </div>
+    
+    <div class="post-list">
+      {%- assign featured_posts = site.posts | slice: 0, 3 -%}
+      {%- for post in featured_posts -%}
+      <article class="post-item">
+        <div class="post-meta">
+          <span class="post-category">{{ post.categories | first | capitalize }}</span>
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time>
+        </div>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+        {%- if post.excerpt -%}
+          <div class="post-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</div>
+        {%- endif -%}
+      </article>
+      {%- endfor -%}
+    </div>
+    
+    <div class="text-center mt-3">
+      <a href="/blog/" class="btn btn-outline">View All Articles</a>
+    </div>
+  </div>
+</div>
+{%- endif -%}
+
+<div class="home">{{ content }}</div>

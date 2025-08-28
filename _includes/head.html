@@ -1,0 +1,72 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {%- seo -%}
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  
+  <!-- Preload critical fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Meta tags for better SEO -->
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta name="keywords" content="technology consulting, AI solutions, software engineering, DevOps, mobile development, finance technology, healthcare technology, compliance, HIPAA, SOX, ISO 27001">
+  <meta name="author" content="{{ site.author.name | default: site.title }}">
+  
+  <!-- Open Graph meta tags -->
+  <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+  <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  
+  <!-- Twitter Card meta tags -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ page.title | default: site.title | escape }}">
+  <meta name="twitter:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  {%- if site.twitter_username -%}
+    <meta name="twitter:site" content="@{{ site.twitter_username }}">
+  {%- endif -%}
+  
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "{% if page.date %}BlogPosting{% else %}Organization{% endif %}",
+    {% if page.date %}"headline": "{{ page.title | escape }}",
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ site.author.name | default: site.title }}"
+    },{% endif %}
+    "name": "{{ site.title }}",
+    "description": "{{ site.description | escape }}",
+    "url": "{{ site.url }}",
+    "logo": "{{ site.url }}/assets/images/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "{{ site.email }}",
+      "contactType": "Customer Service"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Ground Floor, Unit B Lostock Office Park, Lynstock Way",
+      "addressLocality": "Lostock",
+      "addressRegion": "Bolton",
+      "postalCode": "BL6 4SG",
+      "addressCountry": "GB"
+    },
+    "areaServed": ["US", "GB", "EU"],
+    "serviceType": ["Technology Consulting", "AI Solutions", "Software Engineering", "DevOps"]
+  }
+  </script>
+  
+  {%- feed_meta -%}
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+  {%- endif -%}
+</head>

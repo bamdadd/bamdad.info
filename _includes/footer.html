@@ -1,0 +1,90 @@
+<footer class="site-footer h-card">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>{{ site.title }}</h4>
+      <p>{{ site.description }}</p>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Services</h4>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="/about/#artificial-intelligence">AI Solutions</a></li>
+        <li><a href="/about/#software-engineering">Software Engineering</a></li>
+        <li><a href="/about/#devops">DevOps & Infrastructure</a></li>
+        <li><a href="/about/#mobile-development">Mobile Development</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Industries</h4>
+      <ul style="list-style: none; padding: 0;">
+        <li><a href="/about/#finance">Financial Services</a></li>
+        <li><a href="/about/#healthcare">Healthcare</a></li>
+        <li><a href="/about/#legal">Legal Sector</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-section" id="contact">
+      <h4>Contact</h4>
+      <p>
+        Email: <a href="#" onclick="revealEmailFooter(this); return false;" class="email-obfuscated">Click to reveal email</a><br>
+        Address: Ground Floor, Unit B<br>
+        Lostock Office Park, Lynstock Way<br>
+        Lostock, Bolton, England, BL6 4SG
+      </p>
+      
+      <div class="social-links" style="margin-top: 1rem;">
+        {%- if site.github_username -%}
+        <a href="https://github.com/{{ site.github_username| cgi_escape | escape }}" style="margin-right: 1rem;">
+          <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg>
+        </a>
+        {%- endif -%}
+        
+        {%- if site.twitter_username -%}
+        <a href="https://www.twitter.com/{{ site.twitter_username| cgi_escape | escape }}">
+          <svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#twitter' | relative_url }}"></use></svg>
+        </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+.svg-icon {
+  width: 24px;
+  height: 24px;
+  fill: #d1d5db;
+}
+
+.svg-icon:hover {
+  fill: var(--accent-gold);
+}
+
+.footer-section ul {
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.5rem;
+}
+</style>
+
+<script>
+function revealEmailFooter(link) {
+  // ROT13 encoded email to prevent spam bot harvesting
+  const encoded = 'onzqnq@onzqnq.vasb';
+  const email = encoded.replace(/[a-zA-Z]/g, function(c) {
+    return String.fromCharCode((c <= 'Z' ? 90 : 122) >= (c = c.charCodeAt(0) + 13) ? c : c - 26);
+  });
+  
+  // Update the link text and make it a proper mailto
+  link.href = 'mailto:' + email;
+  link.textContent = email;
+  link.onclick = null; // Remove the onclick handler
+}
+</script>
