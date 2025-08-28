@@ -180,7 +180,7 @@ permalink: /contact/
   padding: 1rem;
   background: var(--bg-light);
   border-radius: 6px;
-  border-left: 4px solid var(--accent-blue);
+  border-left: 4px solid var(--accent-pink);
 }
 
 .office-locations {
