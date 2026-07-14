@@ -15,6 +15,10 @@ We are a specialized technology consulting firm focused on delivering transforma
 
 We specialize in developing and deploying AI solutions tailored to the unique challenges of finance and healthcare industries. From fraud detection and risk assessment in banking to diagnostic assistance and patient outcome prediction in healthcare, our AI implementations drive measurable business value while ensuring compliance with industry regulations like HIPAA, SOX, and GDPR.
 
+#### AI Safety, Reliability & Interpretability
+
+Deploying AI is not the hard part; proving what it does is. We help regulated organisations measure and safeguard AI systems rather than trust them on faith: evaluating whether guardrails and model changes actually work, adding deterministic reliability and data-flow checks that run in CI, and flagging the prompt-injection paths that turn an AI agent into a data-leak risk. This work is grounded in ongoing interpretability and agent-safety research we publish in the open, see our [research notes](https://bamdad.substack.com).
+
 #### Enterprise Software Engineering
 
 Our software engineering practice focuses on building secure, scalable, and maintainable systems for regulated industries. We excel at:
