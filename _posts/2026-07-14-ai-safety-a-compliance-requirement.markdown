@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "AI Safety and Reliability: A Compliance Requirement, Not a Research Luxury"
-date:   2026-07-14 10:00:00 +0000
+date:   2026-07-14 08:00:00 +0000
 categories: ai safety
 ---
 
